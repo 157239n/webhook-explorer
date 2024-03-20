@@ -31,7 +31,7 @@ to set it up on your systems</p>
     with k1.captureStdout() as out: db.info()
     h = '\n'.join(out()); overview = f"<pre>{html.escape(h)}</pre>"
 
-    f = aS("f'http://mint-2.l:9015/_control/page/{x}'") | aS(requests.get) | aS("x.text()") | aS(k1.resolve) | executeScriptTags()
+    f = aS("f'/_control/page/{x}'") | aS(requests.get) | aS("x.text()") | aS(k1.resolve) | executeScriptTags()
     ui = range(20) | (toJsFunc() | apply(viz.onload() | f) | viz.Carousel()) | op().interface() | toHtml()
     return f"""{ins}<h1>Sqlite database overview</h1>{overview}<h1>Recent requests</h1>{ui}
 <script>document.querySelector("#btnClear").onclick = async () => {{ await fetch("/_control/wipe"); location.reload(); }}</script>"""
