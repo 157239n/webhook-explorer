@@ -6,4 +6,4 @@ services:
     ports:
       - "9015:80"
     volumes:
-      - .:/code
+      - ./data:/data

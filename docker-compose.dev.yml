@@ -7,3 +7,4 @@ services:
       - "9015:80"
     volumes:
       - .:/code
+      - ./data:/data

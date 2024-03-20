@@ -2,7 +2,7 @@ from k1lib.imports import *
 from flask import Flask, request
 app = Flask(__name__)
 
-dbFn = "/code/lite.db"; dbInitialized = os.path.exists(dbFn)
+dbFn = "/data/lite.db"; dbInitialized = os.path.exists(dbFn)
 lite = sql(dbFn, mode="lite")["default"]
 if not dbInitialized:
     lite.query("""
