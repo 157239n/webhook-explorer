@@ -1,0 +1,9 @@
+version: "3.5"
+services:
+  webhook:
+    image: 157239n/webhook-explorer
+    restart: always
+    ports:
+      - "9015:80"
+    volumes:
+      - .:/code

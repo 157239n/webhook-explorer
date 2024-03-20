@@ -1,0 +1,9 @@
+version: "3.5"
+services:
+  webhook:
+    build: .
+    restart: always
+    ports:
+      - "9015:80"
+    volumes:
+      - .:/code

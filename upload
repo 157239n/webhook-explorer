@@ -1,0 +1,6 @@
+#!/bin/bash
+
+docker build --tag 157239n/webhook-explorer .
+docker image push 157239n/webhook-explorer
+
+

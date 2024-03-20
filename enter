@@ -1,0 +1,4 @@
+#!/bin/bash
+
+docker exec -it webhook-explorer-webhook-1 bash
+
